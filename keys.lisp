@@ -10,6 +10,11 @@
 ;;; *top-map*
 (set-prefix-key (kbd "C-<"))
 
+;;; Controlling sound
+(define-key *top-map* (kbd "XF86AudioMute") "mute")
+(define-key *top-map* (kbd "XF86AudioRaiseVolume") "exec amixer -c 1 set Master 10%+")
+(define-key *top-map* (kbd "XF86AudioLowerVolume") "exec amixer -c 1 set Master 10%-")
+
 ;;; *root-map*
 (define-key *root-map* (kbd "x") '*app-map*)
 (define-key *root-map* (kbd "i") '*internet-map*)

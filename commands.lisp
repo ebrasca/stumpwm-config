@@ -1,5 +1,13 @@
 (in-package :stumpwm)
 
+(let ((muted-p nil))
+  (defcommand mute () ()
+    "Mute/unmute sound"
+    (if muted-p
+        (run-commands "exec amixer -c 1 set Master unmute")
+        (run-commands "exec amixer -c 1 set Master mute"))
+    (setf muted-p (not muted-p))))
+
 (defcommand emacs/normal () ()
   "Run or raise emacs/normal."
   (run-or-raise "emacs --name emacs/normal" '(:title "emacs/normal")))
