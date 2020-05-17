@@ -1,7 +1,7 @@
 (in-package :stumpwm)
 
 (let ((muted-p nil))
-  (defcommand mute () ()
+  (defcommand toggle-sound () ()
     "Mute/unmute sound"
     (if muted-p
         (run-commands "exec amixer -c 1 set Master unmute")
