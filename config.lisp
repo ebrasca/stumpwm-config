@@ -1,6 +1,6 @@
 (in-package :stumpwm)
 
-(defparameter *web-browser* "sudo -u ff firefox")
+(defparameter *web-browser* "firefox")
 
 ;; (notify:notify-server-toggle)
 
