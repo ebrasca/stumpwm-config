@@ -35,6 +35,5 @@
     (define-key m (kbd "m") "emacs/gnus")
     (define-key m (kbd "c") "xterminal")
     (define-key m (kbd "v") "vlc")
-    (define-key m (kbd "q") "qtox")
     (define-key m (kbd "f") "firefox")
     (define-key m (kbd "s") "swank")))
