@@ -1,14 +1,5 @@
 (in-package :stumpwm)
 
-(defun get-proc-file-field (fname field)
-  (with-open-file (s fname :if-does-not-exist nil)
-    (if s
-        (do ((line (read-line s nil nil) (read-line s nil nil)))
-            ((null line) nil)
-          (let ((split (cl-ppcre:split "\\s*:\\s*" line)))
-            (when (string= (car split) field) (return (cadr split)))))
-        "")))
-
 ;; prompt the user for an interactive command. The first arg is an
 ;; optional initial contents.
 (defcommand colon1 (&optional (initial "")) (:rest)
