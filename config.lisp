@@ -8,7 +8,7 @@
       *mouse-focus-policy* :ignore
       *mode-line-timeout* 5
       *group-format* " %n%s%t "
-      *screen-mode-line-format* (list '(:eval (run-shell-command "date '+%R, %F %a'|tr -d [:cntrl:]" t))
+      *screen-mode-line-format* (list '(:eval (run-shell-command "date '+%F %H:%M'| tr -d [:cntrl:]" t))
                                       " | %C | %M | %l | [^B%n^b] %W"))
 
 ;; Turn on the modeline
