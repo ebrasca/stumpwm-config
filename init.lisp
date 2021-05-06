@@ -7,6 +7,7 @@
                 :trivial-shell
                 :cl-ppcre
                 :cpu
+                :mem
 		:net
                 ;; :notify
 		))
@@ -20,7 +21,6 @@
         (format *error-output* "File '~a' doesn't exist." file))))
 
 (loop :for file :in '("utils"
-                      "modeline-memory"
                       "config"
                       "keys"
                       "commands"
